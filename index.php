@@ -1,6 +1,9 @@
 <?php
-include 'includes/header.php';
+include 'includes/header.html';
+include 'includes/config.php';
+
 ?>
+
 
 <!-- Contenu de la page d'accueil -->
 <section id="home">
@@ -9,6 +12,8 @@ include 'includes/header.php';
         <p>Découvrez mes projets et compétences en développement web.</p>
     </div>
 </section>
+
+
 
 
 <!-- Autres sections ou contenus spécifiques à la page d'accueil -->

@@ -8,16 +8,7 @@
 </head>
     <body>
     <h2>Contactez-nous</h2>
-    <?php
-    // Afficher un message en fonction du paramètre GET 'envoi'
-    if (isset($_GET['envoi'])) {
-        if ($_GET['envoi'] == "success") {
-            echo "<p>Votre message a été envoyé avec succès. Nous vous contacterons bientôt.</p>";
-        } elseif ($_GET['envoi'] == "error") {
-            echo "<p>Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.</p>";
-        }
-    }
-    ?>
+
     <form action="includes/envoyer_email.php" method="post">
         <label for="nom">Nom :</label><br>
         <input type="text" id="nom" name="nom" required><br>

@@ -17,7 +17,8 @@ INSERT INTO utilisateurs (nom_utilisateur, mot_de_passe, email)
 VALUES
     ('bernarddu28', '" . hacherMotDePasse('nanard_civic') . "', 'bernard.dragibus@gmail.com'),
     ('theolerigolo', '" . hacherMotDePasse('theolagrossebite') . "', 'theolerigolo@mescouilles.fr'),
-    ('chiasse32', '" . hacherMotDePasse('groscaca320') . "', NULL);
+    ('chiasse32', '" . hacherMotDePasse('groscaca320') . "', NULL),
+    ('Bastoune', '" . hacherMotDePasse('Bastien4478') . "', 'bastienkulmatiski@gmail.com')
 ";
 
 // Exécuter la requête SQL

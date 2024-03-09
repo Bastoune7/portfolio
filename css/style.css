@@ -1,8 +1,22 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ########## --- By Bastien Kulmatiski --- ########## */
+
+
+
+
+
+*{
+    transition: all 0.6s;
+    font-family: Gill Sans, sans-serif;
+    color: black;
+    scroll-behavior: smooth;
+}
+@keyframes fadein {     /* création de l'animation "fadein" (part d'aucun affichage jusqu'à afficher complètement) */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 /* Style du corps de la page */

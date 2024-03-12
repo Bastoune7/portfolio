@@ -3,7 +3,7 @@ session_start();
 
 // Vérifier si l'utilisateur est déjà connecté, le rediriger vers la page d'administration s'il est connecté
 if (isset($_SESSION['utilisateur_connecte'])) {
-    header("Location: dashboard.php");
+    header("Location: ../admin");
     exit;
 }
 
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Authentification réussie, enregistrer l'utilisateur dans la session
             $_SESSION['utilisateur_connecte'] = $nom_utilisateur;
             // Rediriger vers la page d'accueil ou une autre page sécurisée
-            header("Location: dashboard.php");
+            header("Location: ../admin");
             exit();
         } else {
             // Mot de passe incorrect
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="text" id="nom_utilisateur" name="nom_utilisateur" required><br>
     <label for="mot_de_passe">Mot de passe :</label><br>
     <input type="password" id="mot_de_passe" name="mot_de_passe" required><br><br>
-    <?php if(isset($erreur)) { ?>
+    <?php if (isset($erreur)) { ?>
         <p class="erreur"><?php echo $erreur; ?></p>
     <?php } ?>
     <input type="submit" value="Se connecter">

@@ -83,5 +83,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php } ?>
     <input type="submit" value="Se connecter">
 </form>
+
+<!-- Bouton pour créer un compte -->
+<form method="get" action="creer_compte.php">
+    <input type="submit" value="Créer un compte">
+</form>
+
 </body>
 </html>

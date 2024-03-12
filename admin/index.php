@@ -39,7 +39,7 @@ echo "Bienvenue, $utilisateur_connecte !";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <!-- Inclure le script JavaScript via la fonction -->
-    <script src="chemin/vers/script.js"></script>
+    <script src="portfolio/js/script.js"></script>
     <script>
         // Appeler la fonction pour inclure le script d'inactivité
         Inactivite();

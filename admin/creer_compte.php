@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "Votre demande de compte a été enregistrée avec succès. Un administrateur traitera votre demande dans les plus brefs délais.";
     } else {
         // Erreur lors de l'enregistrement de la demande de compte
-        $erreur = "Une erreur est survenue lors de l'enregistrement de votre demande de compte. Veuillez réessayer.";
+        $erreur = "Une erreur est survenue lors de l'enregistrement de votre demande de compte. Veuillez réessayer ou me contacter via  <a href='/contact.php'>le formulaire de contact</a>";
     }
 
     // Fermer la connexion à la base de données

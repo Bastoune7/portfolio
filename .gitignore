@@ -8,3 +8,4 @@ node_modules/
 
 # Fichiers de logs
 /logs/
+.DS_Store

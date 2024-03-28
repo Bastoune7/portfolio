@@ -8,21 +8,13 @@ if (isset($_SESSION['utilisateur_connecte'])) {
 }
 
 // Inclusion du fichier de configuration de la base de données
-include '../includes/config.php';
+require_once '../includes/config.php';
 
 // Vérifier si le formulaire de connexion a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
     $nom_utilisateur = $_POST["nom_utilisateur"];
     $mot_de_passe = $_POST["mot_de_passe"];
-
-    // Connexion à la base de données
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die("Échec de la connexion à la base de données : " . $conn->connect_error);
-    }
 
     // Préparer la requête SQL sécurisée pour récupérer le mot de passe de l'utilisateur
     $stmt = $conn->prepare("SELECT id, mot_de_passe FROM utilisateurs WHERE nom_utilisateur = ?");

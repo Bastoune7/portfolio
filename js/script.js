@@ -10,7 +10,7 @@ function Inactivite() {
     // Fonction pour réinitialiser le minuteur d'inactivité
     function reinitialiserMinuteur() {
         clearTimeout(timeout);
-        timeout = setTimeout(deconnexion, 60 * 1000); // Déclenche la déconnexion après 20 minutes d'inactivité
+        timeout = setTimeout(deconnexion, 20 * 60 * 1000); // Déclenche la déconnexion après 20 minutes d'inactivité
     }
 
     // Écouteurs d'événements pour détecter l'activité de l'utilisateur
@@ -19,7 +19,7 @@ function Inactivite() {
     document.addEventListener('click', reinitialiserMinuteur);
 
     // Initialisation du minuteur au chargement de la page
-    let timeout = setTimeout(deconnexion, 60 * 1000); // Déclenche la déconnexion après 20 minutes d'inactivité
+    let timeout = setTimeout(deconnexion, 20 * 60 * 1000); // Déclenche la déconnexion après 20 minutes d'inactivité
 }
 
 // Appeler la fonction pour inclure le script d'inactivité

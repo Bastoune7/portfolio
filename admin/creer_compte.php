@@ -13,13 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_DEFAULT);
 
     // Connexion à la base de données
-    include '../includes/config.php';
-
-    // Vérifier la connexion
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if ($conn->connect_error) {
-        die("Échec de la connexion à la base de données : " . $conn->connect_error);
-    }
+    require_once '../includes/config.php';
 
     // Préparer la requête SQL pour insérer les données dans la table de demandes de compte
     $stmt = $conn->prepare("INSERT INTO demande_compte (nom_utilisateur, email, mot_de_passe) VALUES (?, ?, ?)");

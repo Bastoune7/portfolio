@@ -1,7 +1,7 @@
 <?php
 // Inclusion du fichier de configuration de la base de données
 include '../includes/fonctions.php';
-include '../includes/config.php';
+require_once '../includes/config.php';
 
 // Connexion à la base de données
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);

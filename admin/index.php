@@ -29,6 +29,15 @@ if (isset($_GET['suppression'])) {
         $message_erreur = 'Une erreur est survenue lors de la suppression du projet.';
     }
 }
+
+// Vérifier si un message d'erreur ou de succès est passé dans l'URL
+if (isset($_GET['modification'])) {
+    if ($_GET['modification'] == 'succes') {
+        $message_succes = 'Projet supprimé avec succès.';
+    } elseif ($_GET['suppression'] == 'erreur') {
+        $message_erreur = 'Une erreur est survenue lors de la suppression du projet.';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
